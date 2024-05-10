@@ -44,33 +44,37 @@ const questions = [
       name: "ShapeColor",
       message: "Enter a hexadecimal color value or a color for the background color:",
     },
+    {
+      type: "input",
+      name: "FileName",
+      message: "Enter the file name for the SVG (without extension):",
+    },
 ];
 
 
 
+
   // This is the function that will be called when the user answers the questions and then the logo will generate with the answers
-function writeToFile(data) {
-    fs.writeFile("./examples/logo.svg", data, (err) => {
-      // If there is an error, log the error to the console, otherwise log that the logo was generated.
+  function writeToFile(data, fileName) {
+    fs.writeFile(`./examples/${fileName}.svg`, data, (err) => {
       if (err) {
         console.log(err);
       } else if (data) {
-        console.log("Generated logo.svg!");
+        console.log(`Generated ${fileName}.svg!`);
       } else {
         console.log("No data to save.");
       }
     });
-  };
+}
+
   // This is the function that initializes the application and then prompts the user with the questions array, and then calls the write to file function with the data from the answers.
-function init() {
+  function init() {
     inquirer.prompt(questions).then((answers) => {
-      // This logs the answers to the console.
-      console.log(answers);
-      const data = generateSvgLogo(answers);
-      // This logs the data to the console.
-      console.log(data);
-      writeToFile(data);
+        console.log(answers);
+        const data = generateSvgLogo(answers);
+        console.log(data);
+        writeToFile(data, answers.FileName);
     });
-  };
+}
   // This exports the init function so that it can be called in the index.js file.
  init();
