@@ -19,7 +19,8 @@ SO THAT I don't have to pay a graphic designer
  ## Installation
 
  Install the following:
- nmp install node.js
+ <br>
+ npm install node.js
  <br>
  npm install inquirer
  <br>
