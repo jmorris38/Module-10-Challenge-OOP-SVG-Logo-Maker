@@ -3,7 +3,9 @@ Object-oriented Programming Challenge: SVG Logo Maker
 
  ## User Story
 AS a freelance web developer
+<br>
 I WANT to generate a simple logo for my projects
+<br>
 SO THAT I don't have to pay a graphic designer
 
 
@@ -18,8 +20,11 @@ SO THAT I don't have to pay a graphic designer
 
  Install the following:
  nmp install node.js
+ <br>
  npm install inquirer
+ <br>
  npm install jest
+ <br>
 
  ## Usage
 
@@ -27,11 +32,11 @@ SO THAT I don't have to pay a graphic designer
 
  ## Logo Preview
  <img src="./examples/bkue.svg" width="300" heigth="200">
- <br>
+
  <img src="./examples/logo.svg" width="300" heigth="200">
- <br>
+
  <img src="./examples/adn.svg" width="300" heigth="200">
- <br>
+
 
 
  ## License
